@@ -24,8 +24,9 @@ public class ItemsResource {
 			} else if (acceptHeader.contains("application/rdf+json")) {
 				return Response.ok().header("Content-Type", "application/rdf+json;charset=UTF-8").build();
 			} else if (acceptHeader.contains("text/html")) {
-				URI targetURIForRedirection = new URI("http://linkedgeodesy.org");
-				return Response.seeOther(targetURIForRedirection).build();
+				//URI targetURIForRedirection = new URI("http://linkedgeodesy.org");
+				//return Response.seeOther(targetURIForRedirection).build();
+				return ResponseGZIP.setResponse(acceptEncoding, "");
 			} else if (acceptHeader.contains("application/xml")) {
 				return Response.ok("Content-Type", "application/xml;charset=UTF-8").build();
 			} else if (acceptHeader.contains("application/rdf+xml")) {
@@ -47,7 +48,7 @@ public class ItemsResource {
 
 	@GET
 	@Path("/{resource}")
-	@Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
+	@Produces({"application/json;charset=UTF-8", "application/xml;charset=UTF-8", "application/rdf+xml;charset=UTF-8", "text/turtle;charset=UTF-8", "text/n3;charset=UTF-8", "application/ld+json;charset=UTF-8", "application/rdf+json;charset=UTF-8"})
 	public Response getInfo2(@HeaderParam("Accept-Encoding") String acceptEncoding, @HeaderParam("Accept") String acceptHeader, @PathParam("resource") String resource) {
 		try {
 			if (acceptHeader.contains("application/json")) {
@@ -55,8 +56,9 @@ public class ItemsResource {
 			} else if (acceptHeader.contains("application/rdf+json")) {
 				return Response.ok().header("Content-Type", "application/rdf+json;charset=UTF-8").build();
 			} else if (acceptHeader.contains("text/html")) {
-				URI targetURIForRedirection = new URI("http://linkedgeodesy.org");
-				return Response.seeOther(targetURIForRedirection).build();
+				//URI targetURIForRedirection = new URI("http://linkedgeodesy.org");
+				//return Response.seeOther(targetURIForRedirection).build();
+				return ResponseGZIP.setResponse(acceptEncoding, "");
 			} else if (acceptHeader.contains("application/xml")) {
 				return Response.ok("Content-Type", "application/xml;charset=UTF-8").build();
 			} else if (acceptHeader.contains("application/rdf+xml")) {
