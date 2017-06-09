@@ -48,6 +48,8 @@
         <servlet-name>data</servlet-name>
         <url-pattern>/data/*</url-pattern>
     </servlet-mapping>
+	<!-- https://www.w3.org/2011/gld/wiki/223_Best_Practices_URI_Construction#TWC_RPI_Draft -->
+	<!-- https://logd.tw.rpi.edu/instance-hub-uri-design -->
 	<servlet-mapping>
         <servlet-name>resource</servlet-name>
         <url-pattern>/id/*</url-pattern>
