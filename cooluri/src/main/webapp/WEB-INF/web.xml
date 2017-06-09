@@ -50,6 +50,6 @@
     </servlet-mapping>
 	<servlet-mapping>
         <servlet-name>resource</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/id/*</url-pattern>
     </servlet-mapping>
 </web-app>
