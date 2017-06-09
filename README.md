@@ -16,7 +16,7 @@ The code was developed in `NetBeans IDE 8.1`, using `Java EE 7 Web`, `JDK 1.8` a
 ## Idea
 
 * cool URI via: `http://localhost:8084/id/*`
-* api query via: `http://localhost:8084/data/*`
+* document representaion via: `http://localhost:8084/data/*`
 
 ## Configuration
 
