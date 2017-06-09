@@ -13,6 +13,11 @@
 
 The code was developed in NetBeans IDE 8.1, using Java EE 7 Web, JDK 1.8 and Maven 4.0.
 
+## Idea
+
+* cool URI via: `http://localhost:8084/id/*`
+* api query via: `http://localhost:8084/data/*`
+
 ## Configuration
 
 Copy the `config.properties.template` to `config.properties`.
